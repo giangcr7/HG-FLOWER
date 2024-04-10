@@ -91,7 +91,12 @@
 .menu > ul > li:hover a {
   color: #db1956;
 }
-
+.menu-icon {
+  display: none;
+}
+.menu-icon i {
+  font-size: 30px;
+}
 .header-notice {
   text-align: center;
   color: #ff3b3d;
