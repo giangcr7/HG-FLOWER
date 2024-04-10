@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Hoa Tuoi HG</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="../styles/ctsp.css" />
+    <link rel="stylesheet" href="../styles/chatbox.css" />
+    <link rel="stylesheet" href="../styles/templatect.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="../js/backtotop.js" defer></script>
+    <script src="../js/chatbox.js" defer></script>
+    <script src="../js/responsive.js" defer></script>
+  </head>
+
+  <body>
+    <div class="chat-icon">
+      <img src="../images_hoa/chat-icon.png" alt="chat" />
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chat-profile">
+        <img src="../images_hoa/uichat.jpg" alt="" />
+
+        <div class="chat-profile-text">
+          <h3>Hoa tươi HG</h3>
+          <p>Online</p>
+        </div>
+      </div>
+      <div id="chatlist">
+        <ul></ul>
+      </div>
+
+      <div class="message-box-wrap">
+        <div class="message-box"></div>
+        <button id="send">></button>
+      </div>
+
+      <div class="admin-client-message-wrap">
+        <select name="service" data-question="Dịch vụ của chúng tôi">
+          <option>Các loại hoa</option>
+          <option>Hoa sinh nhât</option>
+          <option>Hoa chúc mừng</option>
+          <option>Hoa lan</option>
+          <option>Hoa khai trương</option>
+        </select>
+        <input type="text" name="name" data-question="Bạn tên là gì" />
+        <input
+          type="text"
+          name="email"
+          data-question="Email của bạn là gì"
+          data-name
+          required
+        />
+        <input type="text" name="phone" data-question="Số điện thoại của bạn" />
+        <div data-question="Đồng ý ?">
+          <button id="confirm">Yes</button>
+          <button id="notconfirm">No</button>
+        </div>
+      </div>
+
+      <form id="submit_info_form">
+        <div class="submit_info"></div>
+        <input type="submit" value="Send" id="submit" name="" />
+      </form>
+    </div>
+    <!--------------------------CHATBOX end------------------>
+    <!---------------BACK TO TOP--------------------->
+    <button class="go-top-btn">
+      <img src="../images_hoa/arrow_up.jpg" alt="arrow_up" />
+    </button>
+    <!-- HEADER -->
+    <div class="header-container">
+      <div class="container">
+        <div class="row header-content">
+          <div class="col-lg-4 hotline">
+            <h3>HOTLINE ĐẶT HOA</h3>
+            <p>0869785680 - 0948613411</p>
+          </div>
+          <div class="col-lg-4 logo">
+            <img src="../images_hoa/logoc.png" alt="logo" />
+          </div>
+          <div class="col-lg-4 header_service">
+            <div class="search-box">
+              <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input type="text" class="search-input" placeholder="Tìm kiếm" />
+            </div>
+            <div class="shopping">
+              <button class="cart">
+                <a href=""> <i class="fa-solid fa-cart-shopping"></i></a>
+              </button>
+            </div>
+            <div class="user">
+              <button>
+                <a href="./html/login.html"
+                  ><i class="fa-regular fa-user"></i
+                ></a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row header-menu">
+        <div class="col-lg-12 menu">
+          <ul id="menuList">
+            <li><a href="../index.html">Trang chủ</a></li>
+            <li><a href="./hoasn.html">hoa sinh nhật </a></li>
+            <li><a href="./hoakt.html">hoa khai trương</a></li>
+            <li><a href="./hoalan.html">hoa lan</a></li>
+            <li><a href="./hoacm.html">hoa chúc mừng </a></li>
+          </ul>
+          <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END HEADER -->
+    <!-- CONTENT -->
+    <div class="container ctsp">
+      <div class="content">
+        <div class="wrapper">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="crumbs">
+                <li>
+                  <a href="../index.html" title="Trang chủ"
+                    >Trang chủ
+                    <i class="fa-solid fa-arrow-right-long crumbs_icon"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="./hoasn.html" title="Hoa sinh nhật" class="last"
+                    >Hoa sinh nhật</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="items">
+            <div class="row product_ctsp">
+              <div class="col-lg-4 l-item">
+                <div class="product-imgs">
+                  <div class="img-display">
+                    <div class="img-showcase">
+                      <img src="../images_hoa/chitiet (3).jpg" alt="" />
+                      <img src="../images_hoa/chitiet (1).jpg" alt="" />
+                      <img src="../images_hoa/chitiet (3).jpg" alt="" />
+                      <img src="../images_hoa/chitiet2 (3).jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="img-select">
+                    <div class="img-item">
+                      <a href="#" data-id="1">
+                        <img src="../images_hoa/chitiet (3).jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="img-item">
+                      <a href="#" data-id="2">
+                        <img src="../images_hoa/chitiet (1).jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="img-item">
+                      <a href="#" data-id="3">
+                        <img src="../images_hoa/chitiet2 (3).jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="img-item">
+                      <a href="#" data-id="4">
+                        <img src="../images_hoa/chitiet (4).jpg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8 r_item">
+                <h2>Tình đầu thơ ngây</h2>
+                <div class="single-price">
+                  <span class="price">250.000 đ</span>
+                </div>
+                <p class="vat">
+                  Giá đã bao gồm 8% VAT - Sản phẩm chưa bao gồm phí giao tận nơi
+                </p>
+                <b>Sản phẩm bao gồm:</b>
+                <ul class="material">
+                  <li>Cẩm chướng chùm hồng viền: 3</li>
+                  <li>Cúc calimero hồng : 3</li>
+                  <li>Hoa Sao tím: 1</li>
+                  <li>Pink OHara: 1</li>
+                </ul>
+                <p style="font-size: 14px">
+                  Sản phẩm thực nhận có thể khác với hình đại diện trên website
+                  (đặc điểm thủ công và tính chất tự nhiên của hàng nông nghiệp)
+                  <br />
+                  <b
+                    style="
+                      font-size: 14px;
+                      font-weight: bold;
+                      color: rgba(25, 25, 25, 0.682);
+                    "
+                    >Hoa giao nhanh 60 phút Hồ Chí Minh</b
+                  >
+                </p>
+                <div class="offer">
+                  <h4 style="color: #288ad6">Lưu ý</h4>
+                  <p style="color: #288ad6">
+                    Sản phẩm bạn đang chọn là sản phẩm được thiết kế đặc biệt!
+                  </p>
+                  <p style="color: #288ad6">
+                    Hiện nay, Hoayeuthuong.com chỉ thử nghiệm cung cấp cho thị
+                    trường <strong>Tp. Hồ Chí Minh và Hà Nội</strong>
+                  </p>
+                </div>
+                <div class="area_order">
+                  <button class="add-cart">Thêm vào giỏ</button>
+                  <button class="buy-now">Mua ngay</button>
+                </div>
+
+                <div class="offer">
+                  <h4 style="color: #288ad6">ƯU ĐÃI ĐẶC BIỆT</h4>
+                  <ul class="benefit">
+                    <li>
+                      Tặng banner hoặc thiệp (trị giá 20.000đ - 50.000đ) miễn
+                      phí
+                    </li>
+                    <li>
+                      Giảm tiếp 3% cho đơn hàng Bạn tạo ONLINE lần thứ 2, 5% cho
+                      đơn hàng Bạn tạo ONLINE lần thứ 6 và 10% cho đơn hàng Bạn
+                      tạo ONLINE lần thứ 12.
+                    </li>
+                    <li>Miễn phí giao khu vực nội thành</li>
+                    <li>Giao gấp trong vòng 2 giờ</li>
+                    <li>Cam kết 100% hoàn lại tiền nếu Bạn không hài lòng</li>
+                    <li>Cam kết hoa tươi trên 3 ngày</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END CONTENT -->
+    <div class="container hcl">
+      <div class="text">
+        <h4>Những mẫu hoa cùng loại</h4>
+      </div>
+      <div class="product-list g-4">
+        <a class="product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (2).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (3).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (4).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (7).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (8).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (9).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (10).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (11).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!----------------------------------------------------FOOTER------------------------------->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="row">
+            <div class="col-lg-4">
+              <p class="footer__top__logo">
+                <img src="../images_hoa/logoc.png" alt="logoc" />
+              </p>
+              <p class="address">
+                <b>Shop Hoa Tươi HG</b><br />Địa chỉ trụ sở: 11/17 Nguyễn Thái
+                Sơn, P.17, Quận Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam <br />
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <h4 class="text-footer">Dịch vụ của chúng tôi</h4>
+              <ul class="footer__top__menu">
+                <li>
+                  <a href="./html/hoasn.html" title="Hoa khai trương"
+                    >Hoa sinh nhật</a
+                  >
+                </li>
+                <li>
+                  <a href="./html/hoakt.html" title="Hoa khai trương"
+                    >Hoa khai trương</a
+                  >
+                </li>
+                <li>
+                  <a href="./html/hoalan.html" title="Hoa chia buồn">Hoa lan</a>
+                </li>
+                <li>
+                  <a href="./html/hoacm.html" title="Hoa lan">Hoa chúc mừng</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 footer__top__social">
+              <h4>Theo dõi chúng tôi</h4>
+              <ul>
+                <li>
+                  <a href="#" class="social_facebook"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="social_youtube"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="social_instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__slogan">Tặng hoa - Tặng yêu thương</div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="../js/slick_slider.js"></script>
+    <script src="../js/Product Detail.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

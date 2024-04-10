@@ -1,0 +1,390 @@
+@media only screen and (max-width: 767px) {
+  .header-container .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .hotline h3 {
+    font-size: 15px;
+  }
+
+  .hotline p {
+    font-size: 15px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    text-align: center;
+    margin-top: 0px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu ul li {
+    padding: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header-container {
+    transition: all ease 0.5s;
+  }
+
+  #menuList {
+    transition: all ease 0.5s;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .menu.open #menuList {
+    max-height: 300px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .shopping {
+    display: none;
+  }
+
+  .user {
+    display: none;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  /*----------------------------------header-------------------------------------------*/
+  /*--------------------------------------------SẢN PHẨM-------------------------------*/
+  .product-list .product-item-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  /*----------------------Phân trang -------------------------------------------------*/
+  .listPage {
+    padding: 5px;
+    text-align: center;
+    list-style: none;
+  }
+  .listPage li {
+    background-color: #ffffffbd;
+    padding: 10px;
+    display: inline-block;
+    margin: 0 0px;
+    cursor: pointer;
+    transition: all ease 300ms;
+  }
+  .listPage .active {
+    background-color: #b192ef;
+    color: #fff;
+  }
+  /*-------------------------SHOWTEXT------------------------------------------------------------ */
+  .show-more-btn,
+  .show-less-btn {
+    background-color: #db1963;
+    border-color: #db1963;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.6px;
+    box-shadow: #ffe8f0 0px 0px 0px 1.38406px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .show-more-btn {
+    display: block;
+  }
+
+  .show-less-btn {
+    display: none;
+  }
+
+  .content:not(.expanded) {
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  /*-------------------FOOTER------------------------------------------------------------*/
+  .footer__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__top__logo img {
+    width: 200px;
+    height: 50px;
+  }
+
+  .address {
+    text-align: justify;
+    font-size: 15px;
+  }
+
+  .text-footer {
+    text-align: justify;
+    font-size: 15px;
+    margin-left: 0px;
+  }
+
+  .footer__top__menu {
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .footer__top ul {
+    padding-left: 0;
+  }
+
+  .footer__top__menu li {
+    display: block;
+    margin-left: 0;
+    padding: 10px 10px;
+  }
+
+  .footer__top__menu a {
+    font-size: 15px;
+  }
+
+  .footer__top__social h4 {
+    text-align: justify;
+    font-size: 15px;
+  }
+
+  .footer__top__social ul {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .footer__top__social li {
+    margin-right: 5px;
+    padding: 10px 10px;
+  }
+
+  /*------------------------------------CHATBOX-------------------------------*/
+  .chat-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .go-top-btn img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .go-top-btn {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .hotline {
+    text-align: center;
+    padding-top: 10px;
+  }
+  .hotline h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .hotline p {
+    font-size: 25px;
+  }
+  .logo > img {
+    width: 200px;
+    height: 70px;
+  }
+  .search-box,
+  .shopping,
+  .user {
+    transform: scale(0.8);
+  }
+  /*-------------------------------------MENU---------------------------------*/
+  .menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    text-align: left;
+    margin-top: 0px;
+    padding: 0;
+    margin: 0;
+  }
+  .menu ul li {
+    padding: 10px;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    float: left;
+    padding: 10px 10px;
+  }
+
+  .header-container {
+    transition: all ease 0.5s;
+  }
+  #menuList {
+    transition: all ease 0.5s;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .menu.open #menuList {
+    max-height: 300px;
+  }
+
+  .header-notice {
+    font-size: 25px;
+  }
+
+  .service-items {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  /*---------------------------SẢN PHẨM-------------------------------------*/
+  .product-list .product-item-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /*-------------------------SHOWTEXT------------------------------------------------------------ */
+  .show-more-btn,
+  .show-less-btn {
+    background-color: #db1963;
+    border-color: #db1963;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.6px;
+    box-shadow: #ffe8f0 0px 0px 0px 1.38406px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .show-more-btn {
+    display: block;
+  }
+
+  .show-less-btn {
+    display: none;
+  }
+
+  .content:not(.expanded) {
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  /*---------------------------FOOTER-------------------------------------*/
+  .footer__top__logo img {
+    width: 200px;
+    height: 70px;
+  }
+  .text-footer {
+    font-size: 20px;
+  }
+  .footer__top__menu li {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  .footer__top__menu a {
+    font-size: 20px;
+  }
+  .footer__top__social h4 {
+    font-size: 20px;
+  }
+  .footer__top__social li {
+    padding: 5px 5px;
+  }
+  .address {
+    font-size: 20px;
+  }
+}
+
+/*-----------------------------------------------------*/
+
+@media only screen and (min-width: 1200px) {
+  .logo > img {
+    width: 300px;
+    height: 100px;
+  }
+  /*-------------------------SHOWTEXT------------------------------------------------------------ */
+  .show-more-btn,
+  .show-less-btn {
+    background-color: #db1963;
+    border-color: #db1963;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.6px;
+    box-shadow: #ffe8f0 0px 0px 0px 1.38406px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .show-more-btn {
+    display: block;
+  }
+
+  .show-less-btn {
+    display: none;
+  }
+
+  .content:not(.expanded) {
+    max-height: 100px;
+    overflow: hidden;
+  }
+  .footer {
+    padding-top: 10px;
+  }
+  .footer__top__logo img {
+    width: 300px;
+    height: 100px;
+  }
+  .text-footer {
+    font-size: 20px;
+  }
+  .footer__top__menu li {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  .footer__top__menu a {
+    font-size: 15px;
+  }
+  .footer__top__social h4 {
+    font-size: 20px;
+  }
+}

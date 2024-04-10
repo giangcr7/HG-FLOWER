@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Hoa Tuoi HG</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/hoakt.css" />
+    <link rel="stylesheet" href="../styles/chatbox.css" />
+    <link rel="stylesheet" href="../styles/templatesp.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="../js/backtotop.js" defer></script>
+    <script src="../js/chatbox.js" defer></script>
+    <script src="../js/responsive.js" defer></script>
+    <script src="../js/showtext.js" defer></script>
+  </head>
+
+  <body>
+    <div class="chat-icon">
+      <img src="../images_hoa/chat-icon.png" alt="chat" />
+    </div>
+
+    <div class="chatbot-box">
+      <div class="chat-profile">
+        <img src="../images_hoa/uichat.jpg" alt="" />
+
+        <div class="chat-profile-text">
+          <h3>Hoa tươi HG</h3>
+          <p>Online</p>
+        </div>
+      </div>
+      <div id="chatlist">
+        <ul></ul>
+      </div>
+
+      <div class="message-box-wrap">
+        <div class="message-box"></div>
+        <button id="send">></button>
+      </div>
+
+      <div class="admin-client-message-wrap">
+        <select name="service" data-question="Dịch vụ của chúng tôi">
+          <option>Các loại hoa</option>
+          <option>Hoa sinh nhât</option>
+          <option>Hoa chúc mừng</option>
+          <option>Hoa lan</option>
+          <option>Hoa khai trương</option>
+        </select>
+        <input type="text" name="name" data-question="Bạn tên là gì" />
+        <input
+          type="text"
+          name="email"
+          data-question="Email của bạn là gì"
+          data-name
+          required
+        />
+        <input type="text" name="phone" data-question="Số điện thoại của bạn" />
+        <div data-question="Đồng ý ?">
+          <button id="confirm">Yes</button>
+          <button id="notconfirm">No</button>
+        </div>
+      </div>
+
+      <form id="submit_info_form">
+        <div class="submit_info"></div>
+        <input type="submit" value="Send" id="submit" name="" />
+      </form>
+    </div>
+    <!--------------------------CHATBOX end------------------>
+    <!---------------BACK TO TOP--------------------->
+    <button class="go-top-btn">
+      <img src="../images_hoa/arrow_up.jpg" alt="arrow_up" />
+    </button>
+    <!------------------------------HEADER------------------------>
+    <!------------------------------------------------------------>
+    <div class="header-container">
+      <div class="container">
+        <div class="row header-content">
+          <div class="col-lg-4 hotline">
+            <h3>HOTLINE ĐẶT HOA</h3>
+            <p>0869785680 - 0948613411</p>
+          </div>
+          <div class="col-lg-4 logo">
+            <img src="../images_hoa/logoc.png" alt="logo" />
+          </div>
+          <div class="col-lg-4 header_service">
+            <div class="search-box">
+              <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input type="text" class="search-input" placeholder="Tìm kiếm" />
+            </div>
+            <div class="shopping">
+              <button class="cart">
+                <a href=""> <i class="fa-solid fa-cart-shopping"></i></a>
+              </button>
+            </div>
+            <div class="user">
+              <button>
+                <a href="./login.html"><i class="fa-regular fa-user"></i></a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row header-menu">
+        <div class="col-lg-12 menu">
+          <ul id="menuList">
+            <li><a href="../index.html">Trang chủ</a></li>
+            <li><a href="./hoasn.html">hoa sinh nhật </a></li>
+            <li><a href="./hoakt.html">hoa khai trương</a></li>
+            <li><a href="./hoalan.html">hoa lan</a></li>
+            <li><a href="./hoacm.html">hoa chúc mừng </a></li>
+          </ul>
+          <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------------CARTEGORY------------------>
+    <div class="container hkt">
+      <h4>hoa khai trương</h4>
+      <div class="row product-list g-4">
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (1).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (3).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (4).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (5).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (7).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (8).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (9).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (10).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_cm (1).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_cm (2).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_cm (3).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_cm (4).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_cm (5).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_cm (6).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_cm (7).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_cm (8).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (1).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (2).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (3).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (4).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (5).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (6).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (7).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_Sn (8).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (1).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (2).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (3).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (4).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (5).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (6).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (7).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_kt (8).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_lan (1).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_lan (2).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_lan (3).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_lan (4).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_lan (5).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_lan (6).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_lan (7).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+
+        <a class="col-lg-3 product-item-wrapper" href="#">
+          <div class="product-item">
+            <img
+              class="product-thumb"
+              src="../images_hoa/Hoa_lan (12).jpg"
+              alt=""
+            />
+            <div class="sp">
+              <b>Sắc đỏ</b>
+              <span class="price">370.000VND</span>
+              <button class="shop">Đặt mua ngay</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-----------------PAGINATION UI------------->
+    <ul class="listPage">
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <!---------------TEXT------------------------------------------>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text">
+          <div class="content">
+            <h3 style="text-align: center">
+              Đặt Hoa Khai Trương Giao Tận Nơi Miễn Phí
+            </h3>
+            <p style="text-align: justify">
+              <strong>Hoa khai trương</strong> là món quà tặng không thể thiếu
+              để gửi lời chúc mừng đối tác, người thân nhân dịp khai trương cửa
+              hàng, chi nhánh Công ty. Không chỉ là món quà tặng thông thường,
+              một kệ
+              <strong><a href="./hoakt.html">hoa khai trương</a></strong>
+              được thiết kế từ những loài hoa mang ý nghĩa may mắn, tài lộc còn
+              giúp bạn gửi đi thông điệp về tình hữu nghị bền chặt, mong muốn
+              xây dựng mối quan hệ thêm bền chặt giữa 2 Công ty.
+            </p>
+            <p style="text-align: justify">
+              Nếu bạn đang cần đặt một mẫu hoa để gửi tặng đối tác, người thân,
+              bạn bè nhân dịp khai trương cửa hàng, công ty. Tham khảo ngay bộ
+              sưu tập những mẫu hoa chúc mừng khai trương đẹp, sang trọng được
+              thiết kế bởi Shop Hoa Tươi HG.
+            </p>
+          </div>
+          <button class="show-more-btn">Show more</button>
+          <button class="show-less-btn">Show less</button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="row">
+            <div class="col-lg-4">
+              <p class="footer__top__logo">
+                <img src="../images_hoa/logoc.png" alt="logoc" />
+              </p>
+              <p class="address">
+                <b>Shop Hoa Tươi HG</b><br />Địa chỉ trụ sở: 11/17 Nguyễn Thái
+                Sơn, P.17, Quận Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam <br />
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <h4 class="text-footer">Dịch vụ của chúng tôi</h4>
+              <ul class="footer__top__menu">
+                <li>
+                  <a href="./hoasn.html" title="Hoa khai trương"
+                    >Hoa sinh nhật</a
+                  >
+                </li>
+                <li>
+                  <a href="./hoakt.html" title="Hoa khai trương"
+                    >Hoa khai trương</a
+                  >
+                </li>
+                <li>
+                  <a href="./hoalan.html" title="Hoa chia buồn">Hoa lan</a>
+                </li>
+                <li>
+                  <a href="./hoacm.html" title="Hoa lan">Hoa chúc mừng</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 footer__top__social">
+              <h4>Theo dõi chúng tôi</h4>
+              <ul>
+                <li>
+                  <a href="#" class="social_facebook"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="social_youtube"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="social_instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__slogan">Tặng hoa - Tặng yêu thương</div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
